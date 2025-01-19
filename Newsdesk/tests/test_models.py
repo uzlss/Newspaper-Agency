@@ -7,7 +7,7 @@ from Newsdesk.models import Topic, Newspaper
 class TestModels(TestCase):
 
     @classmethod
-    def setUpClass(cls):
+    def setUpTestData(cls):
         cls.topic = Topic.objects.create(name="Test Topic")
         cls.redactor = get_user_model().objects.create_user(
             username="test_user",
@@ -35,7 +35,7 @@ class TestModels(TestCase):
     def test_newspaper_str(self):
         self.assertEqual(
             str(self.newspaper),
-            f"{self.newspaper.title} ({self.newspaper.topic})"
+            f"{self.newspaper.title} (Topic: {self.newspaper.topic})"
         )
 
     def test_redactor_without_experience(self):
@@ -44,7 +44,7 @@ class TestModels(TestCase):
         )
 
     def test_redactor_with_experience(self):
-        redactor = self.redactor.copy()
+        redactor = self.redactor
         redactor.years_of_experience = 20
         redactor.save()
         self.assertEqual(redactor.years_of_experience, 20)
