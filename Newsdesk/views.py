@@ -2,6 +2,7 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
+from django.urls import reverse, reverse_lazy
 from django.views import generic
 
 from Newsdesk.models import Newspaper, Topic, Redactor
@@ -20,6 +21,17 @@ def index(request):
 class TopicListView(LoginRequiredMixin, generic.ListView):
     model = Topic
     paginate_by = 10
+
+
+class TopicCreateView(LoginRequiredMixin, generic.CreateView):
+    model = Topic
+    fields = "__all__"
+    success_url = reverse_lazy("newsdesk:topic-list")
+
+class TopicUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = Topic
+    fields = "__all__"
+    success_url = reverse_lazy("newsdesk:topic-list")
 
 
 class NewspaperListView(LoginRequiredMixin, generic.ListView):
