@@ -12,4 +12,12 @@
       {{ newspaper.content }}
     </p>
   </div>
+  <form action="{% url "newsdesk:newspaper-toggle-assign" pk=newspaper.id %}" method="post">
+    {% csrf_token %}
+    {% if newspaper in user.newspapers.all %}
+      <input class="btn btn-danger" type="submit" value="Delete me from this newspaper">
+    {% else %}
+      <input class="btn btn-success" type="submit" value="Assign me to this newspaper">
+    {% endif %}
+  </form>
 {% endblock %}

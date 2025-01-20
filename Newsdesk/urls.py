@@ -15,7 +15,8 @@ from Newsdesk.views import (
     RedactorUpdateView,
     TopicDeleteView,
     NewspaperDeleteView,
-    RedactorDeleteView
+    RedactorDeleteView,
+    ToggleNewspaperRedactor
 )
 
 
@@ -33,6 +34,7 @@ urlpatterns = [
     path("news/<int:pk>/", NewspaperDetailView.as_view(), name="newspaper-detail"),
     path("news/<int:pk>/update/", NewspaperUpdateView.as_view(), name="newspaper-update"),
     path("news/<int:pk>/delete/", NewspaperDeleteView.as_view(), name="newspaper-delete"),
+    path("news/<int:pk>/toggle_assign/", ToggleNewspaperRedactor.as_view(), name="newspaper-toggle-assign"),
     path("redactors/", RedactorListView.as_view(), name="redactor-list"),
     path("redactors/create/", RedactorCreateView.as_view(), name="redactor-create"),
     path("redactors/<int:pk>/", RedactorDetailView.as_view(), name="redactor-detail"),

@@ -1,8 +1,9 @@
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
-from django.urls import reverse, reverse_lazy
+from django.urls import reverse_lazy
 from django.views import generic
 
 from Newsdesk.forms import RedactorCreationForm, RedactorUpdateNewspapersForm
@@ -68,6 +69,22 @@ class NewspaperDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Newspaper
     success_url = reverse_lazy("newsdesk:newspaper-list")
     template_name_suffix = "_confirm_delete"
+
+
+class ToggleNewspaperRedactor(LoginRequiredMixin, generic.View):
+
+    def post(self, request, pk, *args, **kwargs):
+        newspaper = Newspaper.objects.get(pk=pk)
+        redactor = request.user
+        if (
+            newspaper in redactor.newspapers.all()
+        ):
+            redactor.newspapers.remove(pk)
+        else:
+            redactor.newspapers.add(pk)
+        return HttpResponseRedirect(
+            reverse_lazy("newsdesk:newspaper-detail", kwargs={"pk": pk})
+        )
 
 
 class RedactorListView(LoginRequiredMixin, generic.ListView):
