@@ -16,3 +16,4 @@ def index(request):
 
 class TopicListView(generic.ListView):
     model = Topic
+    paginate_by = 10
