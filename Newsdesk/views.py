@@ -17,3 +17,14 @@ def index(request):
 class TopicListView(generic.ListView):
     model = Topic
     paginate_by = 10
+
+
+class NewspaperListView(generic.ListView):
+    model = Newspaper
+    paginate_by = 5
+
+
+class NewspaperDetailView(generic.DetailView):
+    model = Newspaper
+    queryset = Newspaper.objects.all().select_related("topic")
+    queryset = queryset.prefetch_related("publishers")
