@@ -1,0 +1,1197 @@
+[
+  {
+    "model": "Newsdesk.topic",
+    "pk": 1,
+    "fields": {
+      "name": "Topic 1"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 2,
+    "fields": {
+      "name": "Topic 2"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 3,
+    "fields": {
+      "name": "Topic 3"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 4,
+    "fields": {
+      "name": "Topic 4"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 5,
+    "fields": {
+      "name": "Topic 5"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 6,
+    "fields": {
+      "name": "Topic 6"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 7,
+    "fields": {
+      "name": "Topic 7"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 8,
+    "fields": {
+      "name": "Topic 8"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 9,
+    "fields": {
+      "name": "Topic 9"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 10,
+    "fields": {
+      "name": "Topic 10"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 11,
+    "fields": {
+      "name": "Topic 11"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 12,
+    "fields": {
+      "name": "Topic 12"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 13,
+    "fields": {
+      "name": "Topic 13"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 14,
+    "fields": {
+      "name": "Topic 14"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 15,
+    "fields": {
+      "name": "Topic 15"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 16,
+    "fields": {
+      "name": "Topic 16"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 17,
+    "fields": {
+      "name": "Topic 17"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 18,
+    "fields": {
+      "name": "Topic 18"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 19,
+    "fields": {
+      "name": "Topic 19"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 20,
+    "fields": {
+      "name": "Topic 20"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 21,
+    "fields": {
+      "name": "Topic 21"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 22,
+    "fields": {
+      "name": "Topic 22"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 23,
+    "fields": {
+      "name": "Topic 23"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 24,
+    "fields": {
+      "name": "Topic 24"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 25,
+    "fields": {
+      "name": "Topic 25"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 26,
+    "fields": {
+      "name": "Topic 26"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 27,
+    "fields": {
+      "name": "Topic 27"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 28,
+    "fields": {
+      "name": "Topic 28"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 29,
+    "fields": {
+      "name": "Topic 29"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 30,
+    "fields": {
+      "name": "Topic 30"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 31,
+    "fields": {
+      "name": "Topic 31"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 32,
+    "fields": {
+      "name": "Topic 32"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 33,
+    "fields": {
+      "name": "Topic 33"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 34,
+    "fields": {
+      "name": "Topic 34"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 35,
+    "fields": {
+      "name": "Topic 35"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 36,
+    "fields": {
+      "name": "Topic 36"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 37,
+    "fields": {
+      "name": "Topic 37"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 38,
+    "fields": {
+      "name": "Topic 38"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 39,
+    "fields": {
+      "name": "Topic 39"
+    }
+  },
+  {
+    "model": "Newsdesk.topic",
+    "pk": 40,
+    "fields": {
+      "name": "Topic 40"
+    }
+  },
+  {
+    "model": "Newsdesk.redactor",
+    "pk": 1,
+    "fields": {
+      "username": "user1",
+      "first_name": "First1",
+      "last_name": "Last1",
+      "email": "user1@example.com",
+      "years_of_experience": 14,
+      "password": "pbkdf2_sha256$32000$..."
+    }
+  },
+  {
+    "model": "Newsdesk.redactor",
+    "pk": 2,
+    "fields": {
+      "username": "user2",
+      "first_name": "First2",
+      "last_name": "Last2",
+      "email": "user2@example.com",
+      "years_of_experience": 11,
+      "password": "pbkdf2_sha256$32000$..."
+    }
+  },
+  {
+    "model": "Newsdesk.redactor",
+    "pk": 3,
+    "fields": {
+      "username": "user3",
+      "first_name": "First3",
+      "last_name": "Last3",
+      "email": "user3@example.com",
+      "years_of_experience": 2,
+      "password": "pbkdf2_sha256$32000$..."
+    }
+  },
+  {
+    "model": "Newsdesk.redactor",
+    "pk": 4,
+    "fields": {
+      "username": "user4",
+      "first_name": "First4",
+      "last_name": "Last4",
+      "email": "user4@example.com",
+      "years_of_experience": 19,
+      "password": "pbkdf2_sha256$32000$..."
+    }
+  },
+  {
+    "model": "Newsdesk.redactor",
+    "pk": 5,
+    "fields": {
+      "username": "user5",
+      "first_name": "First5",
+      "last_name": "Last5",
+      "email": "user5@example.com",
+      "years_of_experience": 5,
+      "password": "pbkdf2_sha256$32000$..."
+    }
+  },
+  {
+    "model": "Newsdesk.redactor",
+    "pk": 6,
+    "fields": {
+      "username": "user6",
+      "first_name": "First6",
+      "last_name": "Last6",
+      "email": "user6@example.com",
+      "years_of_experience": 15,
+      "password": "pbkdf2_sha256$32000$..."
+    }
+  },
+  {
+    "model": "Newsdesk.redactor",
+    "pk": 7,
+    "fields": {
+      "username": "user7",
+      "first_name": "First7",
+      "last_name": "Last7",
+      "email": "user7@example.com",
+      "years_of_experience": 20,
+      "password": "pbkdf2_sha256$32000$..."
+    }
+  },
+  {
+    "model": "Newsdesk.redactor",
+    "pk": 8,
+    "fields": {
+      "username": "user8",
+      "first_name": "First8",
+      "last_name": "Last8",
+      "email": "user8@example.com",
+      "years_of_experience": 10,
+      "password": "pbkdf2_sha256$32000$..."
+    }
+  },
+  {
+    "model": "Newsdesk.redactor",
+    "pk": 9,
+    "fields": {
+      "username": "user9",
+      "first_name": "First9",
+      "last_name": "Last9",
+      "email": "user9@example.com",
+      "years_of_experience": 20,
+      "password": "pbkdf2_sha256$32000$..."
+    }
+  },
+  {
+    "model": "Newsdesk.redactor",
+    "pk": 10,
+    "fields": {
+      "username": "user10",
+      "first_name": "First10",
+      "last_name": "Last10",
+      "email": "user10@example.com",
+      "years_of_experience": 10,
+      "password": "pbkdf2_sha256$32000$..."
+    }
+  },
+  {
+    "model": "Newsdesk.redactor",
+    "pk": 11,
+    "fields": {
+      "username": "user11",
+      "first_name": "First11",
+      "last_name": "Last11",
+      "email": "user11@example.com",
+      "years_of_experience": 2,
+      "password": "pbkdf2_sha256$32000$..."
+    }
+  },
+  {
+    "model": "Newsdesk.redactor",
+    "pk": 12,
+    "fields": {
+      "username": "user12",
+      "first_name": "First12",
+      "last_name": "Last12",
+      "email": "user12@example.com",
+      "years_of_experience": 15,
+      "password": "pbkdf2_sha256$32000$..."
+    }
+  },
+  {
+    "model": "Newsdesk.redactor",
+    "pk": 13,
+    "fields": {
+      "username": "user13",
+      "first_name": "First13",
+      "last_name": "Last13",
+      "email": "user13@example.com",
+      "years_of_experience": 17,
+      "password": "pbkdf2_sha256$32000$..."
+    }
+  },
+  {
+    "model": "Newsdesk.redactor",
+    "pk": 14,
+    "fields": {
+      "username": "user14",
+      "first_name": "First14",
+      "last_name": "Last14",
+      "email": "user14@example.com",
+      "years_of_experience": 4,
+      "password": "pbkdf2_sha256$32000$..."
+    }
+  },
+  {
+    "model": "Newsdesk.redactor",
+    "pk": 15,
+    "fields": {
+      "username": "user15",
+      "first_name": "First15",
+      "last_name": "Last15",
+      "email": "user15@example.com",
+      "years_of_experience": 16,
+      "password": "pbkdf2_sha256$32000$..."
+    }
+  },
+  {
+    "model": "Newsdesk.redactor",
+    "pk": 16,
+    "fields": {
+      "username": "user16",
+      "first_name": "First16",
+      "last_name": "Last16",
+      "email": "user16@example.com",
+      "years_of_experience": 8,
+      "password": "pbkdf2_sha256$32000$..."
+    }
+  },
+  {
+    "model": "Newsdesk.redactor",
+    "pk": 17,
+    "fields": {
+      "username": "user17",
+      "first_name": "First17",
+      "last_name": "Last17",
+      "email": "user17@example.com",
+      "years_of_experience": 12,
+      "password": "pbkdf2_sha256$32000$..."
+    }
+  },
+  {
+    "model": "Newsdesk.redactor",
+    "pk": 18,
+    "fields": {
+      "username": "user18",
+      "first_name": "First18",
+      "last_name": "Last18",
+      "email": "user18@example.com",
+      "years_of_experience": 11,
+      "password": "pbkdf2_sha256$32000$..."
+    }
+  },
+  {
+    "model": "Newsdesk.redactor",
+    "pk": 19,
+    "fields": {
+      "username": "user19",
+      "first_name": "First19",
+      "last_name": "Last19",
+      "email": "user19@example.com",
+      "years_of_experience": 4,
+      "password": "pbkdf2_sha256$32000$..."
+    }
+  },
+  {
+    "model": "Newsdesk.redactor",
+    "pk": 20,
+    "fields": {
+      "username": "user20",
+      "first_name": "First20",
+      "last_name": "Last20",
+      "email": "user20@example.com",
+      "years_of_experience": 4,
+      "password": "pbkdf2_sha256$32000$..."
+    }
+  },
+  {
+    "model": "Newsdesk.redactor",
+    "pk": 21,
+    "fields": {
+      "username": "user21",
+      "first_name": "First21",
+      "last_name": "Last21",
+      "email": "user21@example.com",
+      "years_of_experience": 7,
+      "password": "pbkdf2_sha256$32000$..."
+    }
+  },
+  {
+    "model": "Newsdesk.redactor",
+    "pk": 22,
+    "fields": {
+      "username": "user22",
+      "first_name": "First22",
+      "last_name": "Last22",
+      "email": "user22@example.com",
+      "years_of_experience": 18,
+      "password": "pbkdf2_sha256$32000$..."
+    }
+  },
+  {
+    "model": "Newsdesk.redactor",
+    "pk": 23,
+    "fields": {
+      "username": "user23",
+      "first_name": "First23",
+      "last_name": "Last23",
+      "email": "user23@example.com",
+      "years_of_experience": 13,
+      "password": "pbkdf2_sha256$32000$..."
+    }
+  },
+  {
+    "model": "Newsdesk.redactor",
+    "pk": 24,
+    "fields": {
+      "username": "user24",
+      "first_name": "First24",
+      "last_name": "Last24",
+      "email": "user24@example.com",
+      "years_of_experience": 20,
+      "password": "pbkdf2_sha256$32000$..."
+    }
+  },
+  {
+    "model": "Newsdesk.redactor",
+    "pk": 25,
+    "fields": {
+      "username": "user25",
+      "first_name": "First25",
+      "last_name": "Last25",
+      "email": "user25@example.com",
+      "years_of_experience": 1,
+      "password": "pbkdf2_sha256$32000$..."
+    }
+  },
+  {
+    "model": "Newsdesk.redactor",
+    "pk": 26,
+    "fields": {
+      "username": "user26",
+      "first_name": "First26",
+      "last_name": "Last26",
+      "email": "user26@example.com",
+      "years_of_experience": 18,
+      "password": "pbkdf2_sha256$32000$..."
+    }
+  },
+  {
+    "model": "Newsdesk.redactor",
+    "pk": 27,
+    "fields": {
+      "username": "user27",
+      "first_name": "First27",
+      "last_name": "Last27",
+      "email": "user27@example.com",
+      "years_of_experience": 6,
+      "password": "pbkdf2_sha256$32000$..."
+    }
+  },
+  {
+    "model": "Newsdesk.redactor",
+    "pk": 28,
+    "fields": {
+      "username": "user28",
+      "first_name": "First28",
+      "last_name": "Last28",
+      "email": "user28@example.com",
+      "years_of_experience": 10,
+      "password": "pbkdf2_sha256$32000$..."
+    }
+  },
+  {
+    "model": "Newsdesk.redactor",
+    "pk": 29,
+    "fields": {
+      "username": "user29",
+      "first_name": "First29",
+      "last_name": "Last29",
+      "email": "user29@example.com",
+      "years_of_experience": 2,
+      "password": "pbkdf2_sha256$32000$..."
+    }
+  },
+  {
+    "model": "Newsdesk.redactor",
+    "pk": 30,
+    "fields": {
+      "username": "user30",
+      "first_name": "First30",
+      "last_name": "Last30",
+      "email": "user30@example.com",
+      "years_of_experience": 9,
+      "password": "pbkdf2_sha256$32000$..."
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 1,
+    "fields": {
+      "title": "Article 1",
+      "content": "Content for article 1.",
+      "published_date": "2023-04-02T23:01:46",
+      "topic": 25,
+      "publishers": [
+        24
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 2,
+    "fields": {
+      "title": "Article 2",
+      "content": "Content for article 2.",
+      "published_date": "2026-11-29T08:51:05",
+      "topic": 12,
+      "publishers": [
+        6,
+        15
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 3,
+    "fields": {
+      "title": "Article 3",
+      "content": "Content for article 3.",
+      "published_date": "2022-09-23T02:24:02",
+      "topic": 9,
+      "publishers": [
+        29
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 4,
+    "fields": {
+      "title": "Article 4",
+      "content": "Content for article 4.",
+      "published_date": "2021-12-17T08:41:38",
+      "topic": 29,
+      "publishers": [
+        29
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 5,
+    "fields": {
+      "title": "Article 5",
+      "content": "Content for article 5.",
+      "published_date": "2024-12-08T23:15:43",
+      "topic": 13,
+      "publishers": [
+        8,
+        28
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 6,
+    "fields": {
+      "title": "Article 6",
+      "content": "Content for article 6.",
+      "published_date": "2024-01-10T09:23:54",
+      "topic": 16,
+      "publishers": [
+        23,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 7,
+    "fields": {
+      "title": "Article 7",
+      "content": "Content for article 7.",
+      "published_date": "2025-06-07T03:12:42",
+      "topic": 27,
+      "publishers": [
+        25,
+        9
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 8,
+    "fields": {
+      "title": "Article 8",
+      "content": "Content for article 8.",
+      "published_date": "2022-05-23T20:41:16",
+      "topic": 8,
+      "publishers": [
+        6,
+        14,
+        15
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 9,
+    "fields": {
+      "title": "Article 9",
+      "content": "Content for article 9.",
+      "published_date": "2026-09-20T05:46:21",
+      "topic": 40,
+      "publishers": [
+        3,
+        16
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 10,
+    "fields": {
+      "title": "Article 10",
+      "content": "Content for article 10.",
+      "published_date": "2020-06-12T19:19:37",
+      "topic": 27,
+      "publishers": [
+        30
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 11,
+    "fields": {
+      "title": "Article 11",
+      "content": "Content for article 11.",
+      "published_date": "2029-04-14T02:25:31",
+      "topic": 36,
+      "publishers": [
+        16
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 12,
+    "fields": {
+      "title": "Article 12",
+      "content": "Content for article 12.",
+      "published_date": "2020-04-14T05:15:18",
+      "topic": 1,
+      "publishers": [
+        17
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 13,
+    "fields": {
+      "title": "Article 13",
+      "content": "Content for article 13.",
+      "published_date": "2020-07-20T04:10:26",
+      "topic": 23,
+      "publishers": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 14,
+    "fields": {
+      "title": "Article 14",
+      "content": "Content for article 14.",
+      "published_date": "2023-05-04T14:37:00",
+      "topic": 6,
+      "publishers": [
+        15,
+        26
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 15,
+    "fields": {
+      "title": "Article 15",
+      "content": "Content for article 15.",
+      "published_date": "2025-04-02T23:16:37",
+      "topic": 13,
+      "publishers": [
+        12,
+        4
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 16,
+    "fields": {
+      "title": "Article 16",
+      "content": "Content for article 16.",
+      "published_date": "2029-04-08T11:41:59",
+      "topic": 9,
+      "publishers": [
+        29,
+        13,
+        22
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 17,
+    "fields": {
+      "title": "Article 17",
+      "content": "Content for article 17.",
+      "published_date": "2028-04-03T11:43:18",
+      "topic": 3,
+      "publishers": [
+        16,
+        25,
+        29
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 18,
+    "fields": {
+      "title": "Article 18",
+      "content": "Content for article 18.",
+      "published_date": "2021-08-31T17:47:44",
+      "topic": 29,
+      "publishers": [
+        6
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 19,
+    "fields": {
+      "title": "Article 19",
+      "content": "Content for article 19.",
+      "published_date": "2028-04-14T01:40:28",
+      "topic": 24,
+      "publishers": [
+        1,
+        18
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 20,
+    "fields": {
+      "title": "Article 20",
+      "content": "Content for article 20.",
+      "published_date": "2022-10-26T15:46:19",
+      "topic": 1,
+      "publishers": [
+        12,
+        11,
+        26
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 21,
+    "fields": {
+      "title": "Article 21",
+      "content": "Content for article 21.",
+      "published_date": "2026-07-09T23:40:27",
+      "topic": 22,
+      "publishers": [
+        3,
+        17,
+        12
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 22,
+    "fields": {
+      "title": "Article 22",
+      "content": "Content for article 22.",
+      "published_date": "2026-10-10T14:32:30",
+      "topic": 17,
+      "publishers": [
+        28
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 23,
+    "fields": {
+      "title": "Article 23",
+      "content": "Content for article 23.",
+      "published_date": "2021-09-19T17:01:38",
+      "topic": 37,
+      "publishers": [
+        24,
+        6,
+        12
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 24,
+    "fields": {
+      "title": "Article 24",
+      "content": "Content for article 24.",
+      "published_date": "2024-02-21T17:48:49",
+      "topic": 7,
+      "publishers": [
+        19
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 25,
+    "fields": {
+      "title": "Article 25",
+      "content": "Content for article 25.",
+      "published_date": "2028-12-10T23:10:25",
+      "topic": 37,
+      "publishers": [
+        13,
+        23
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 26,
+    "fields": {
+      "title": "Article 26",
+      "content": "Content for article 26.",
+      "published_date": "2021-03-08T11:00:03",
+      "topic": 12,
+      "publishers": [
+        14
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 27,
+    "fields": {
+      "title": "Article 27",
+      "content": "Content for article 27.",
+      "published_date": "2022-04-17T15:50:35",
+      "topic": 7,
+      "publishers": [
+        18
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 28,
+    "fields": {
+      "title": "Article 28",
+      "content": "Content for article 28.",
+      "published_date": "2028-10-07T14:15:18",
+      "topic": 25,
+      "publishers": [
+        26
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 29,
+    "fields": {
+      "title": "Article 29",
+      "content": "Content for article 29.",
+      "published_date": "2020-02-10T21:46:45",
+      "topic": 25,
+      "publishers": [
+        23,
+        7
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 30,
+    "fields": {
+      "title": "Article 30",
+      "content": "Content for article 30.",
+      "published_date": "2024-06-26T17:04:01",
+      "topic": 28,
+      "publishers": [
+        28,
+        26,
+        10
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 31,
+    "fields": {
+      "title": "Article 31",
+      "content": "Content for article 31.",
+      "published_date": "2023-12-17T04:37:45",
+      "topic": 33,
+      "publishers": [
+        21
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 32,
+    "fields": {
+      "title": "Article 32",
+      "content": "Content for article 32.",
+      "published_date": "2026-01-08T00:09:44",
+      "topic": 27,
+      "publishers": [
+        18,
+        28,
+        6
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 33,
+    "fields": {
+      "title": "Article 33",
+      "content": "Content for article 33.",
+      "published_date": "2021-10-11T19:16:36",
+      "topic": 3,
+      "publishers": [
+        9,
+        3
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 34,
+    "fields": {
+      "title": "Article 34",
+      "content": "Content for article 34.",
+      "published_date": "2022-03-18T02:47:48",
+      "topic": 13,
+      "publishers": [
+        29
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 35,
+    "fields": {
+      "title": "Article 35",
+      "content": "Content for article 35.",
+      "published_date": "2029-09-22T06:19:25",
+      "topic": 10,
+      "publishers": [
+        4,
+        17
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 36,
+    "fields": {
+      "title": "Article 36",
+      "content": "Content for article 36.",
+      "published_date": "2025-02-25T21:19:55",
+      "topic": 19,
+      "publishers": [
+        13,
+        27,
+        11
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 37,
+    "fields": {
+      "title": "Article 37",
+      "content": "Content for article 37.",
+      "published_date": "2023-11-16T02:55:50",
+      "topic": 9,
+      "publishers": [
+        13,
+        27
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 38,
+    "fields": {
+      "title": "Article 38",
+      "content": "Content for article 38.",
+      "published_date": "2024-02-02T00:07:01",
+      "topic": 8,
+      "publishers": [
+        3,
+        16,
+        9
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 39,
+    "fields": {
+      "title": "Article 39",
+      "content": "Content for article 39.",
+      "published_date": "2027-10-11T05:50:43",
+      "topic": 35,
+      "publishers": [
+        23,
+        10,
+        30
+      ]
+    }
+  },
+  {
+    "model": "Newsdesk.newspaper",
+    "pk": 40,
+    "fields": {
+      "title": "Article 40",
+      "content": "Content for article 40.",
+      "published_date": "2026-01-15T00:47:26",
+      "topic": 17,
+      "publishers": [
+        29
+      ]
+    }
+  }
+]
