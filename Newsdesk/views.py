@@ -5,6 +5,7 @@ from django.shortcuts import render
 from django.urls import reverse, reverse_lazy
 from django.views import generic
 
+from Newsdesk.forms import RedactorCreationForm, RedactorUpdateNewspapersForm
 from Newsdesk.models import Newspaper, Topic, Redactor
 
 
@@ -64,3 +65,15 @@ class RedactorListView(LoginRequiredMixin, generic.ListView):
 
 class RedactorDetailView(LoginRequiredMixin, generic.DetailView):
     model = Redactor
+
+
+class RedactorCreateView(LoginRequiredMixin, generic.CreateView):
+    model = Redactor
+    form_class = RedactorCreationForm
+    success_url = reverse_lazy("newsdesk:redactor-list")
+
+
+class RedactorUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = Redactor
+    form_class = RedactorUpdateNewspapersForm
+    success_url = reverse_lazy("newsdesk:redactor-list")
