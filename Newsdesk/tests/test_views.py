@@ -51,3 +51,51 @@ class TestViews(TestCase):
             pagination_num,
             f"redactor-list must be paginated to {pagination_num}"
         )
+
+
+class TestLoginView(TestCase):
+
+    @classmethod
+    def setUpTestData(cls):
+        cls.newspaper = Newspaper(
+            id=1,
+            title="Test Newspaper",
+            content="Test content",
+            topic=Topic.objects.create(name="Test Topic"),
+        )
+        cls.publisher = get_user_model().objects.create_user(
+            username="Test User",
+            password="<PASSWORD>",
+        )
+        cls.newspaper.publishers.add(cls.publisher)
+        cls.newspaper.save()
+
+    def test_home_page_login_required(self):
+        url = reverse("newsdesk:index")
+        response = self.client.get(url)
+        self.assertNotEqual(response.status_code, 200)
+
+    def test_topic_list_login_required(self):
+        url = reverse("newsdesk:topic-list")
+        response = self.client.get(url)
+        self.assertNotEqual(response.status_code, 200)
+
+    def test_newspaper_list_login_required(self):
+        url = reverse("newsdesk:newspaper-list")
+        response = self.client.get(url)
+        self.assertNotEqual(response.status_code, 200)
+
+    def test_redactor_list_login_required(self):
+        url = reverse("newsdesk:redactor-list")
+        response = self.client.get(url)
+        self.assertNotEqual(response.status_code, 200)
+
+    def test_newspaper_detail_login_required(self):
+        url = reverse("newsdesk:newspaper-detail", args=[self.newspaper.id])
+        response = self.client.get(url)
+        self.assertNotEqual(response.status_code, 200)
+
+    def test_redactor_detail_login_required(self):
+        url = reverse("newsdesk:redactor-detail", args=[self.publisher.id])
+        response = self.client.get(url)
+        self.assertNotEqual(response.status_code, 200)
