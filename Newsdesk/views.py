@@ -35,6 +35,12 @@ class TopicUpdateView(LoginRequiredMixin, generic.UpdateView):
     success_url = reverse_lazy("newsdesk:topic-list")
 
 
+class TopicDeleteView(LoginRequiredMixin, generic.DeleteView):
+    model = Topic
+    success_url = reverse_lazy("newsdesk:topic-list")
+    template_name_suffix = "_confirm_delete"
+
+
 class NewspaperListView(LoginRequiredMixin, generic.ListView):
     model = Newspaper
     paginate_by = 5
@@ -58,6 +64,12 @@ class NewspaperUpdateView(LoginRequiredMixin, generic.UpdateView):
     success_url = reverse_lazy("newsdesk:newspaper-list")
 
 
+class NewspaperDeleteView(LoginRequiredMixin, generic.DeleteView):
+    model = Newspaper
+    success_url = reverse_lazy("newsdesk:newspaper-list")
+    template_name_suffix = "_confirm_delete"
+
+
 class RedactorListView(LoginRequiredMixin, generic.ListView):
     model = Redactor
     paginate_by = 10
@@ -77,3 +89,9 @@ class RedactorUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Redactor
     form_class = RedactorUpdateNewspapersForm
     success_url = reverse_lazy("newsdesk:redactor-list")
+
+
+class RedactorDeleteView(LoginRequiredMixin, generic.DeleteView):
+    model = Redactor
+    success_url = reverse_lazy("newsdesk:redactor-list")
+    template_name_suffix = "_confirm_delete"
