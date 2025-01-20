@@ -6,27 +6,7 @@ from Newsdesk.models import Topic, Newspaper
 
 
 class TestViews(TestCase):
-
-    @classmethod
-    def setUpTestData(cls):
-        for i in range(11):
-            topic = Topic.objects.create(
-                name=f"Test Topic {i}",
-            )
-            publisher = get_user_model().objects.create_user(
-                username=f"Test Redactor {i}",
-                password=f"<PASSWORD>",
-                first_name=f"Test Firstname {i}",
-                last_name=f"Test Lastname {i}",
-            )
-            newspaper = Newspaper(
-                id=i,
-                title=f"Test Newspaper {i}",
-                content=f"Test Newspaper {i}",
-                topic=topic,
-            )
-            newspaper.publishers.add(publisher)
-            newspaper.save()
+    fixtures = ["Newsdesk/fixtures/test_data.json"]
 
     def setUp(self):
         user = get_user_model().objects.create_user(
