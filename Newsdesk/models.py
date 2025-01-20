@@ -27,7 +27,10 @@ class Newspaper(models.Model):
         on_delete=models.CASCADE,
         related_name="newspapers"
     )
-    publishers = models.ManyToManyField(Redactor)
+    publishers = models.ManyToManyField(
+        Redactor,
+        related_name="newspapers",
+    )
 
     def __str__(self):
         return f"{self.title} (Topic: {self.topic})"

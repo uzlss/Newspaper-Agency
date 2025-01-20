@@ -2,7 +2,7 @@ from django.contrib.auth import get_user_model
 from django.shortcuts import render
 from django.views import generic
 
-from Newsdesk.models import Newspaper, Topic
+from Newsdesk.models import Newspaper, Topic, Redactor
 
 
 def index(request):
@@ -28,3 +28,12 @@ class NewspaperDetailView(generic.DetailView):
     model = Newspaper
     queryset = Newspaper.objects.all().select_related("topic")
     queryset = queryset.prefetch_related("publishers")
+
+
+class RedactorListView(generic.ListView):
+    model = Redactor
+    paginate_by = 10
+
+
+class RedactorDetailView(generic.DetailView):
+    model = Redactor

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>{{ redactor }}</h1>
+  <ul>
+  {% for newspaper in redactor.newspapers.all %}
+    <li>{{ newspaper }}</li>
+  {% endfor %}
+  </ul>
+{% endblock %}
