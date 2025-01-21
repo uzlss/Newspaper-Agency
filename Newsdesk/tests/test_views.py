@@ -99,3 +99,48 @@ class TestLoginView(TestCase):
         url = reverse("newsdesk:redactor-detail", args=[self.publisher.id])
         response = self.client.get(url)
         self.assertNotEqual(response.status_code, 200)
+
+
+class TestSearch(TestCase):
+    fixtures = ["Newsdesk/fixtures/test_data.json"]
+
+    def setUp(self):
+        user = get_user_model().objects.create_user(
+            username="test.user",
+            password="<PASSWORD>",
+        )
+        self.client.force_login(user)
+
+    def test_search_topic_by_name(self):
+        topic_name = "TestSearch Topic"
+        Topic.objects.create(name=topic_name)
+        url = reverse("newsdesk:topic-list")
+        response = self.client.get(url, {"query": topic_name})
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, topic_name)
+        self.assertEqual(len(response.context["topic_list"]), 1)
+
+    def test_search_newspaper_by_title(self):
+        newspaper_title = "TestSearch Newspaper"
+        Newspaper.objects.create(
+            title=newspaper_title,
+            content="Test content",
+            topic=Topic.objects.get(pk=1),
+        )
+        url = reverse("newsdesk:newspaper-list")
+        response = self.client.get(url, {"query": newspaper_title})
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, newspaper_title)
+        self.assertEqual(len(response.context["newspaper_list"]), 1)
+
+    def test_search_redactor_by_username(self):
+        redactor_username = "TestSearch Redactor"
+        get_user_model().objects.create(
+            username=redactor_username,
+            password="<PASSWORD>",
+        )
+        url = reverse("newsdesk:redactor-list")
+        response = self.client.get(url, {"query": redactor_username})
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, redactor_username)
+        self.assertEqual(len(response.context["redactor_list"]), 1)
