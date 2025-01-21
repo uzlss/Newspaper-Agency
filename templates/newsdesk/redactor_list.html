@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+  {% include "includes/search_form.html" %}
   <ul>
   {% for redactor in redactor_list %}
     <li>{{ redactor }}</li>

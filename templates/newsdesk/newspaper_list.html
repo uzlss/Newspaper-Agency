@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+  {% include "includes/search_form.html" %}
   <ul>
   {% for newspaper in newspaper_list %}
     <li>{{ newspaper.title }}</li>

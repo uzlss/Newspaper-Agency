@@ -6,8 +6,16 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 
-from Newsdesk.forms import RedactorCreationForm, RedactorUpdateNewspapersForm
+from Newsdesk.forms import RedactorCreationForm, RedactorUpdateNewspapersForm, SearchForm
 from Newsdesk.models import Newspaper, Topic, Redactor
+
+
+def get_search_context(self, *args, **kwargs):
+    context = super(self.__class__, self).get_context_data(*args, **kwargs)
+    context["search_form"] = SearchForm(
+        initial={"query": self.request.GET.get("query", "")}
+    )
+    return context
 
 
 @login_required
@@ -23,6 +31,17 @@ def index(request):
 class TopicListView(LoginRequiredMixin, generic.ListView):
     model = Topic
     paginate_by = 10
+
+    def get_context_data(self, *args, **kwargs):
+        return get_search_context(self, *args, **kwargs)
+
+    def get_queryset(self):
+        form = SearchForm(self.request.GET)
+        if form.is_valid():
+            return Topic.objects.filter(
+                name__icontains=form.cleaned_data["query"]
+            )
+        return Topic.objects.all()
 
 
 class TopicCreateView(LoginRequiredMixin, generic.CreateView):
@@ -45,6 +64,18 @@ class TopicDeleteView(LoginRequiredMixin, generic.DeleteView):
 class NewspaperListView(LoginRequiredMixin, generic.ListView):
     model = Newspaper
     paginate_by = 5
+
+    def get_context_data(self, *args, **kwargs):
+        return get_search_context(self, *args, **kwargs)
+
+    def get_queryset(self):
+        form = SearchForm(self.request.GET)
+        queryset = Newspaper.objects.all().select_related("topic").prefetch_related("publishers")
+        if form.is_valid():
+            queryset = queryset.filter(
+                title__icontains=form.cleaned_data["query"]
+            )
+        return queryset
 
 
 class NewspaperDetailView(LoginRequiredMixin, generic.DetailView):
@@ -90,6 +121,18 @@ class ToggleNewspaperRedactor(LoginRequiredMixin, generic.View):
 class RedactorListView(LoginRequiredMixin, generic.ListView):
     model = Redactor
     paginate_by = 10
+
+    def get_context_data(self, *args, **kwargs):
+        return get_search_context(self, *args, **kwargs)
+
+    def get_queryset(self):
+        form = SearchForm(self.request.GET)
+        queryset = Redactor.objects.all().prefetch_related("newspapers")
+        if form.is_valid():
+            queryset = queryset.filter(
+                username__icontains=form.cleaned_data["query"]
+            )
+        return queryset
 
 
 class RedactorDetailView(LoginRequiredMixin, generic.DetailView):
