@@ -1,6 +1,17 @@
 {% load crispy_forms_filters %}
-<form class="form-inline" action="" method="get">
-  {{ search_form|crispy }}
-  <input class="btn btn-secondary" type="submit" value="🔍">
-
-</form>
+<section class="py-7">
+  <div class="container">
+    <div class="row justify-space-between py-2">
+      <div class="col-lg-4 mx-auto">
+        <form action="" method="get" class="form-group">
+          <div class="input-group mb-4">
+            <button type="submit" class="input-group-text">
+              <i class="fas fa-search" aria-hidden="true"></i>
+            </button>
+            {{ search_form.query }}
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
