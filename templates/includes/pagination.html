@@ -2,9 +2,9 @@
   {% load query_transform %}
   <section class="py-1">
     <div class="container">
-      <div class="row justify-space-between py-2">
-        <div class="col-lg-4 mx-auto">
-          <ul class="pagination pagination-secondary m-4">
+      <div class="row justify-content-center py-2">  {# Changed justify-space-between to justify-content-center #}
+        <div class="col-auto">  {# Changed from col-lg-4 mx-auto to col-auto #}
+          <ul class="pagination pagination-lg pagination-secondary m-4 justify-content-center">  {# Added justify-content-center #}
             {# Previous Link #}
             <li class="page-item {% if not page_obj.has_previous %}disabled{% endif %}">
               <a class="page-link"
