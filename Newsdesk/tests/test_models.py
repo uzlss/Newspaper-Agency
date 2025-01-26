@@ -29,19 +29,18 @@ class TestModels(TestCase):
     def test_redactor_str(self):
         self.assertEqual(
             str(self.redactor),
-            f"{self.redactor.username} ({self.redactor.first_name} {self.redactor.last_name})"
+            (f"{self.redactor.username}"
+             f" ({self.redactor.first_name} {self.redactor.last_name})"),
         )
 
     def test_newspaper_str(self):
         self.assertEqual(
             str(self.newspaper),
-            f"{self.newspaper.title} (Topic: {self.newspaper.topic})"
+            f"{self.newspaper.title} (Topic: {self.newspaper.topic})",
         )
 
     def test_redactor_without_experience(self):
-        self.assertEqual(
-            self.redactor.years_of_experience, 0
-        )
+        self.assertEqual(self.redactor.years_of_experience, 0)
 
     def test_redactor_with_experience(self):
         redactor = self.redactor

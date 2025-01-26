@@ -6,7 +6,11 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 
-from Newsdesk.forms import RedactorCreationForm, RedactorUpdateNewspapersForm, SearchForm
+from Newsdesk.forms import (
+    RedactorCreationForm,
+    RedactorUpdateNewspapersForm,
+    SearchForm,
+)
 from Newsdesk.models import Newspaper, Topic, Redactor
 
 
@@ -49,6 +53,7 @@ class TopicCreateView(LoginRequiredMixin, generic.CreateView):
     fields = "__all__"
     success_url = reverse_lazy("newsdesk:topic-list")
 
+
 class TopicUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Topic
     fields = "__all__"
@@ -70,7 +75,12 @@ class NewspaperListView(LoginRequiredMixin, generic.ListView):
 
     def get_queryset(self):
         form = SearchForm(self.request.GET)
-        queryset = Newspaper.objects.all().select_related("topic").prefetch_related("publishers").order_by("-published_date")
+        queryset = (
+            Newspaper.objects.all()
+            .select_related("topic")
+            .prefetch_related("publishers")
+            .order_by("-published_date")
+        )
         if form.is_valid():
             queryset = queryset.filter(
                 title__icontains=form.cleaned_data["query"]
@@ -107,9 +117,7 @@ class ToggleNewspaperRedactor(LoginRequiredMixin, generic.View):
     def post(self, request, pk, *args, **kwargs):
         newspaper = Newspaper.objects.get(pk=pk)
         redactor = request.user
-        if (
-            newspaper in redactor.newspapers.all()
-        ):
+        if newspaper in redactor.newspapers.all():
             redactor.newspapers.remove(pk)
         else:
             redactor.newspapers.add(pk)

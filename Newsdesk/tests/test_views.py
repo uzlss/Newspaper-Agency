@@ -29,7 +29,7 @@ class TestViews(TestCase):
         self.assertEqual(
             len(response.context["topic_list"]),
             pagination_num,
-            f"topic-list must be paginated to {pagination_num}"
+            f"topic-list must be paginated to {pagination_num}",
         )
 
     def test_newspaper_list_paginated(self):
@@ -40,7 +40,8 @@ class TestViews(TestCase):
         self.assertEqual(
             len(response.context["newspaper_list"]),
             pagination_num,
-            f"newspaper-list must be paginated to {pagination_num}")
+            f"newspaper-list must be paginated to {pagination_num}",
+        )
 
     def test_redactors_list_paginated(self):
         pagination_num = 10
@@ -49,7 +50,7 @@ class TestViews(TestCase):
         self.assertEqual(
             len(response.context["redactor_list"]),
             pagination_num,
-            f"redactor-list must be paginated to {pagination_num}"
+            f"redactor-list must be paginated to {pagination_num}",
         )
 
 

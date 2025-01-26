@@ -7,24 +7,26 @@ from Newsdesk.models import Newspaper
 
 class RedactorCreationForm(UserCreationForm):
     newspapers = forms.ModelMultipleChoiceField(
-        queryset=Newspaper.objects,
-        required=False
+        queryset=Newspaper.objects, required=False
     )
 
     class Meta:
         model = get_user_model()
-        fields = UserCreationForm.Meta.fields + ("email", "years_of_experience", "newspapers")
+        fields = UserCreationForm.Meta.fields + (
+            "email",
+            "years_of_experience",
+            "newspapers",
+        )
 
 
 class RedactorUpdateNewspapersForm(forms.ModelForm):
     newspapers = forms.ModelMultipleChoiceField(
-        queryset=Newspaper.objects,
-        required=False
+        queryset=Newspaper.objects, required=False
     )
 
     class Meta:
         model = get_user_model()
-        fields = ("newspapers", )
+        fields = ("newspapers",)
 
 
 class SearchForm(forms.Form):
@@ -32,9 +34,12 @@ class SearchForm(forms.Form):
         max_length=255,
         required=False,
         label="",
-        widget=forms.TextInput(attrs={
-            "class": "form-control form-control-lg border-1 text-white white-placeholder",
-            "placeholder": "Search...",
-            "style": "background: transparent;"
-        }),
+        widget=forms.TextInput(
+            attrs={
+                "class": ("form-control form-control-lg"
+                          " border-1 text-white white-placeholder"),
+                "placeholder": "Search...",
+                "style": "background: transparent;",
+            }
+        ),
     )
