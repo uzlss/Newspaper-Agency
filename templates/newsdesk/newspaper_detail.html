@@ -1,23 +1,80 @@
-{% extends "base.html" %}
+{% extends "layouts/base-presentation.html" %}
 
 {% block content %}
-  <h1>{{ newspaper.title }}</h1>
-  <small>
-    {% for publisher in newspaper.publishers.all %}
-      {{ publisher }}
-    {% endfor %} at {{ newspaper.published_date }}
-  </small>
-  <div>
-    <p>
-      {{ newspaper.content }}
-    </p>
+<div class="container mt-lg-8">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="card shadow-lg">
+        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+          <div class="bg-gradient-secondary shadow-secondary border-radius-lg py-3 pe-1">
+            <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">
+              {{ newspaper.title }}
+            </h4>
+          </div>
+        </div>
+        <div class="card-body px-5 pb-4">
+          <div class="d-flex align-items-center justify-content-between mb-4">
+            <div class="d-flex align-items-center gap-3">
+              <span class="badge bg-gradient-dark">
+                <i class="fas fa-calendar me-1"></i>
+                {{ newspaper.published_date|date:"M d, Y" }}
+              </span>
+              <span class="badge bg-gradient-primary">
+                <i class="fas fa-tag me-1"></i>
+                {{ newspaper.topic.name }}
+              </span>
+            </div>
+            <div class="text-end">
+              <small class="text-muted">
+                <i class="fas fa-user-edit me-1"></i>
+                {% for publisher in newspaper.publishers.all %}
+                  {{ publisher.username }}{% if not forloop.last %}, {% endif %}
+                {% endfor %}
+              </small>
+            </div>
+          </div>
+
+          <div class="card border-radius-lg shadow-xs">
+            <div class="card-body">
+              <article class="article-content">
+                {{ newspaper.content|linebreaks }}
+              </article>
+            </div>
+          </div>
+
+          <div class="text-center mt-5">
+            <form action="{% url 'newsdesk:newspaper-toggle-assign' pk=newspaper.id %}" method="post">
+              {% csrf_token %}
+              {% if newspaper in user.newspapers.all %}
+                <button type="submit" class="btn bg-gradient-danger shadow-dark me-2">
+                  <i class="fas fa-user-minus me-2"></i>
+                  Remove Me from Article
+                </button>
+              {% else %}
+                <button type="submit" class="btn bg-gradient-success shadow-dark me-2">
+                  <i class="fas fa-user-plus me-2"></i>
+                  Assign Me to Article
+                </button>
+              {% endif %}
+              <a href="{% url 'newsdesk:newspaper-list' %}" class="btn btn-link text-dark">
+                <i class="fas fa-arrow-left me-2"></i>Back to List
+              </a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <form action="{% url "newsdesk:newspaper-toggle-assign" pk=newspaper.id %}" method="post">
-    {% csrf_token %}
-    {% if newspaper in user.newspapers.all %}
-      <input class="btn btn-danger" type="submit" value="Delete me from this newspaper">
-    {% else %}
-      <input class="btn btn-success" type="submit" value="Assign me to this newspaper">
-    {% endif %}
-  </form>
+</div>
+
+<style>
+  .article-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #344767;
+  }
+  .article-content p:last-child {
+    margin-bottom: 0;
+  }
+</style>
 {% endblock %}
