@@ -70,7 +70,7 @@ class NewspaperListView(LoginRequiredMixin, generic.ListView):
 
     def get_queryset(self):
         form = SearchForm(self.request.GET)
-        queryset = Newspaper.objects.all().select_related("topic").prefetch_related("publishers")
+        queryset = Newspaper.objects.all().select_related("topic").prefetch_related("publishers").order_by("-published_date")
         if form.is_valid():
             queryset = queryset.filter(
                 title__icontains=form.cleaned_data["query"]
