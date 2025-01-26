@@ -33,7 +33,8 @@ class SearchForm(forms.Form):
         required=False,
         label="",
         widget=forms.TextInput(attrs={
+            "class": "form-control form-control-lg border-1 text-white white-placeholder",
             "placeholder": "Search...",
-            "class": "form-control",
+            "style": "background: transparent;"
         }),
     )
