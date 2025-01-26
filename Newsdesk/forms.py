@@ -13,7 +13,7 @@ class RedactorCreationForm(UserCreationForm):
 
     class Meta:
         model = get_user_model()
-        fields = UserCreationForm.Meta.fields + ("years_of_experience", "newspapers")
+        fields = UserCreationForm.Meta.fields + ("email", "years_of_experience", "newspapers")
 
 
 class RedactorUpdateNewspapersForm(forms.ModelForm):
@@ -23,7 +23,7 @@ class RedactorUpdateNewspapersForm(forms.ModelForm):
     )
 
     class Meta:
-        model = Newspaper
+        model = get_user_model()
         fields = ("newspapers", )
 
 

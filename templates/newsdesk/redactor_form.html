@@ -1,5 +1,16 @@
-{% extends "base.html" %}
+  {% extends "layouts/base-presentation.html" %}
 
-{% block content %}
-	{% include "includes/base_form.html" %}
-{% endblock %}
+  {% block content %}
+  <div class="container mt-lg-8">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        {% include 'includes/base_form.html' %}
+        <div class="text-center mt-4">
+          <a href="{% url 'newsdesk:redactor-list' %}" class="btn btn-link text-dark">
+            <i class="fas fa-arrow-left me-2"></i>Back to List
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}
