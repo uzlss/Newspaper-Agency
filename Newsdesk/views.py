@@ -146,6 +146,9 @@ class RedactorListView(LoginRequiredMixin, generic.ListView):
 class RedactorDetailView(LoginRequiredMixin, generic.DetailView):
     model = Redactor
 
+    def get_queryset(self):
+        return Redactor.objects.prefetch_related("newspapers__topic")
+
 
 class RedactorCreateView(LoginRequiredMixin, generic.CreateView):
     model = Redactor
@@ -170,6 +173,7 @@ class RedactorUpdateView(LoginRequiredMixin, generic.UpdateView):
         if "newspapers" in form.cleaned_data:
             self.object.newspapers.set(form.cleaned_data["newspapers"])
         return response
+
 
 class RedactorDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Redactor
