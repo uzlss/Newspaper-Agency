@@ -152,12 +152,24 @@ class RedactorCreateView(LoginRequiredMixin, generic.CreateView):
     form_class = RedactorCreationForm
     success_url = reverse_lazy("newsdesk:redactor-list")
 
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        if "newspapers" in form.cleaned_data:
+            self.object.newspapers.set(form.cleaned_data["newspapers"])
+        return response
+
 
 class RedactorUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Redactor
     form_class = RedactorUpdateNewspapersForm
     success_url = reverse_lazy("newsdesk:redactor-list")
 
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        # Handle ManyToManyField explicitly
+        if "newspapers" in form.cleaned_data:
+            self.object.newspapers.set(form.cleaned_data["newspapers"])
+        return response
 
 class RedactorDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Redactor
