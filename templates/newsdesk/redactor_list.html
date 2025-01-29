@@ -1,0 +1,76 @@
+{% extends "layouts/base-presentation.html" %}
+
+{% block content %}
+  <div class="container mt-lg-8">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card shadow-lg">
+          <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+            <div class="bg-gradient-secondary shadow-secondary border-radius-lg py-3 pe-1">
+              <div class="d-flex justify-content-between align-items-center">
+                {% include 'includes/search_form.html' %}
+                <a href="{% url 'newsdesk:redactor-create' %}" class="btn btn-lg m-0 mx-1 bg-gradient-secondary shadow-dark">
+                  <i class="fas fa-plus me-1"></i> Create
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="card-body px-0 pb-2">
+            <div class="list-group list-group-flush">
+              {% for redactor in redactor_list %}
+                <div class="list-group-item d-flex align-items-center py-3 position-relative">
+                  <a href="{% url 'newsdesk:redactor-detail' redactor.id %}"
+                     class="text-decoration-none text-dark flex-grow-1 hover-scale">
+                    <div class="d-flex align-items-center">
+                      <i class="fas fa-user-tie me-3 text-secondary fs-5"></i>
+                      <div>
+                        <h6 class="mb-0">{{ redactor.username }}</h6>
+                        <div class="text-muted small">
+                          {{ redactor.first_name }} {{ redactor.last_name }}
+                          <span class="ms-2">
+                            <i class="fas fa-envelope me-1"></i>{{ redactor.email }}
+                          </span>
+                          <span class="ms-2">
+                            <i class="fas fa-briefcase me-1"></i>{{ redactor.years_of_experience }} years
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <div class="dropdown ms-2">
+                    <button class="btn btn-link text-dark p-2" type="button"
+                            id="redactorMenu{{ forloop.counter }}"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                      <i class="fas fa-2x fa-ellipsis-v"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end px-2 py-3"
+                        aria-labelledby="redactorMenu{{ forloop.counter }}">
+                      <li>
+                        <a class="dropdown-item border-radius-md text-primary hover-scale"
+                           href="{% url 'newsdesk:redactor-update' redactor.id %}">
+                          <i class="fas fa-pen me-2"></i> Edit
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item border-radius-md text-danger hover-scale"
+                           href="{% url 'newsdesk:redactor-delete' redactor.id %}">
+                          <i class="fas fa-trash me-2"></i> Delete
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              {% empty %}
+                <div class="text-center py-4">
+                  <i class="fas fa-user-slash fa-3x text-gray-300 mb-3"></i>
+                  <h5 class="text-muted">No redactors found</h5>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

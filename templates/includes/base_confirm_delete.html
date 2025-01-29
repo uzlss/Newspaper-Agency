@@ -1,0 +1,43 @@
+{% extends "layouts/base-presentation.html" %}
+
+{% block content %}
+<div class="container mt-lg-8">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="card shadow-lg">
+        <div class="card-header bg-gradient-danger shadow-danger border-radius-lg py-3">
+          <h4 class="text-white font-weight-bolder text-center mb-0">
+            Delete {% block object_type %}Object{% endblock %}?
+          </h4>
+        </div>
+        <div class="card-body px-5 pb-4">
+          <div class="alert alert-danger text-white">
+            <h5 class="alert-heading">
+              <i class="fas fa-exclamation-triangle me-2"></i>
+              {% block warning_message %}
+                You're about to delete:
+              {% endblock %}
+            </h5>
+            <p class="mb-0 fs-5">
+              {% block object_display %}{{ object }}{% endblock %}
+            </p>
+            {% block related_objects %}{% endblock %}
+          </div>
+          
+          <form method="post">
+            {% csrf_token %}
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-danger shadow-dark">
+                <i class="fas fa-trash me-2"></i>Confirm Delete
+              </button>
+              <a href="{% block cancel_url %}#{% endblock %}" class="btn btn-link text-dark">
+                <i class="fas fa-times me-2"></i>Cancel
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

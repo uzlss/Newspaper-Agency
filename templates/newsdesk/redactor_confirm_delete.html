@@ -1,0 +1,21 @@
+{% extends "includes/base_confirm_delete.html" %}
+
+{% block object_type %}Redactor{% endblock %}
+
+{% block object_display %}
+  {{ redactor.username }} ({{ redactor.first_name }} {{ redactor.last_name }})
+{% endblock %}
+
+{% block cancel_url %}{% url 'newsdesk:redactor-list' %}{% endblock %}
+
+{% block related_objects %}
+  {% if redactor.newspapers.exists %}
+    <hr>
+    <p class="mb-0">This redactor is assigned to:</p>
+    <ul class="mt-2">
+      {% for newspaper in redactor.newspapers.all %}
+        <li>{{ newspaper.title }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "includes/base_confirm_delete.html" %}
+
+{% block object_type %}Newspaper{% endblock %}
+
+{% block object_display %}{{ newspaper.title }}{% endblock %}
+
+{% block cancel_url %}{% url 'newsdesk:newspaper-list' %}{% endblock %}
+
+{% block related_objects %}
+  {% if newspaper.publishers.exists or newspaper.topic %}
+    <hr>
+    <div class="mb-0">
+      {% if newspaper.topic %}
+        <p>Associated with topic: <strong>{{ newspaper.topic }}</strong></p>
+      {% endif %}
+
+      {% if newspaper.publishers.exists %}
+        <p>Assigned redactors:</p>
+        <ul class="mt-2">
+          {% for redactor in newspaper.publishers.all %}
+            <li>
+              {{ redactor.username }}
+              {% if redactor.first_name or redactor.last_name %}
+                ({{ redactor.first_name }} {{ redactor.last_name }})
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  {% endif %}
+{% endblock %}

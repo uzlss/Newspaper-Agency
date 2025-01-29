@@ -1,0 +1,14 @@
+{% load crispy_forms_filters %}
+<style>
+  .white-placeholder::placeholder {
+    color: white !important;
+    opacity: 1;
+  }
+</style>
+
+<form method="get" class="d-flex align-items-center flex-grow-1">
+  <button type="submit" class="btn btn-icon-only text-white p-0 m-2 placeholder-white">
+    <i class="fas fa-search fa-lg"></i>
+  </button>
+  {{ search_form.query }}
+</form>
