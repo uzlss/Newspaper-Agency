@@ -29,7 +29,7 @@ def index(request):
         "count_newspapers": Newspaper.objects.count(),
         "count_topics": Topic.objects.count(),
     }
-    return render(request, "newsdesk/index.html", context=context)
+    return render(request, "Newsdesk/index.html", context=context)
 
 
 class TopicListView(LoginRequiredMixin, generic.ListView):
